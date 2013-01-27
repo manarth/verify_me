@@ -1,0 +1,33 @@
+= Verify Me
+
+An object oriented Ruby interface to "Verify" Twitter accounts by adding the "Verified" logo to a user's background image.
+
+== Installation
+
+The easiest way to install Verify Me, is via Ruby Gems:
+
+  gem install verify_me
+
+== Usage
+
+The main purpose of verify_me is to fetch a profile banner from twitter and overlay the "Verified" logo.
+
+  verify = VerifyMe::Verify.new 'twitter_screen_name'
+  new_image = verify.getVerifiedImage
+  file = File.open("/path/to/your/new/file.png", "w")
+  file.write(new_image)
+
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2013 Marcus Deglos. See LICENSE for details.
